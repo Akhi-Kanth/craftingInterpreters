@@ -1,9 +1,12 @@
 package tools;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.print.event.PrintEvent;
 
 public class GenerateAst {
 
@@ -35,14 +38,14 @@ public class GenerateAst {
             defineType(writer, baseName, className, fields);
         }
 
-
         writer.println("}");
         writer.close();
     }
 
     public static void defineType(PrintWriter writer, String baseName, String className, String fieldList) {
         writer.println("    static class " + className + " extends " + baseName + " {");
-        // added a comment; i am learning more
+        writer.println("");
     }
 
+    public static void defineType(PrintEvent)
 }

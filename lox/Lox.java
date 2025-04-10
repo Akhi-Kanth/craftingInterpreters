@@ -73,15 +73,16 @@ public class Lox {
 
         // for now, we will just print out the tokens
         for (Token token : tokens) {
-            // System.out.println("This is running lol");
+            // This is run the Token.toString() method
             System.out.println(token);
         }
     }
 
-    static void error(int line, String message){
+    public static void error(int line, String message){
         // report the error
         report(line, "", message);
     }
+
 
     private static void report(int line, String where, String message){
         // print out the error message
@@ -89,6 +90,7 @@ public class Lox {
         // set the hadError flag to true, we check this flag before running a line
         hadError = true;
     }
+
 
 
 }
